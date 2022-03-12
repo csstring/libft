@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/10 10:59:30 by schoe             #+#    #+#             */
+/*   Updated: 2022/03/10 15:05:28 by schoe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 int	front(char const *s1, char const *set)
 {
 	int	i;
@@ -46,8 +59,8 @@ int	back(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*temp;
 
 	if (s1 == NULL)
@@ -59,6 +72,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (i <= j)
 	{
 		temp = (char *)malloc(sizeof(char) * (j - i + 2));
+		if (temp == NULL)
+			return (0);
 		ft_strlcpy(temp, &s1[i], j - i + 2);
 		return (temp);
 	}

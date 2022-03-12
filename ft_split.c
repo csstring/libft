@@ -1,4 +1,17 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/10 10:52:42 by schoe             #+#    #+#             */
+/*   Updated: 2022/03/10 15:04:45 by schoe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_sep(char s, char c)
 {
 	if (s == c)
@@ -69,6 +82,8 @@ char	**ft_split(char const *s, char c)
 
 	size = word_count(s, c);
 	arr = (char **)malloc(sizeof(char *) * (size + 1));
+	if (arr == NULL)
+		return (NULL);
 	arr[size] = 0;
 	arr_write(arr, s, c);
 	return (arr);

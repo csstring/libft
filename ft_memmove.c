@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/10 10:48:22 by schoe             #+#    #+#             */
+/*   Updated: 2022/03/10 15:04:29 by schoe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*temp_src;
-	unsigned char 	*temp_dest;
+	unsigned char	*temp_dest;
 	unsigned char	*temp;
-	size_t	i;
+	size_t			i;
 
 	temp_dest = (unsigned char *)dest;
 	temp_src = (unsigned char *)src;
