@@ -6,13 +6,13 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:44:55 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:03:45 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/13 20:52:23 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_size(long long nb)
+int	ft_size(long nb)
 {
 	int	size;
 
@@ -27,19 +27,11 @@ int	ft_size(long long nb)
 	return (size);
 }
 
-char	*ft_itoa(int n)
+void	ft_write(char *arr, int size, long nb)
 {
-	long long	nb;
-	char		*arr;
-	int			size;
-	int			i;
+	int	i;
 
 	i = 0;
-	nb = n;
-	size = ft_size(nb);
-	arr = (char *)malloc(sizeof(char) * (size + 2));
-	if (arr == NULL)
-		return (0);
 	if (nb < 0)
 	{
 		i = 1;
@@ -53,5 +45,24 @@ char	*ft_itoa(int n)
 		nb /= 10;
 		size--;
 	}
+}
+
+char	*ft_itoa(int n)
+{
+	long		nb;
+	char		*arr;
+	int			size;
+	int			i;
+
+	i = 0;
+	nb = n;
+	size = ft_size(nb);
+	if (nb < 0)
+		arr = (char *)malloc(sizeof(char) * (size + 2));
+	else
+		arr = (char *)malloc(sizeof(char) * (size + 1));
+	if (arr == NULL)
+		return (0);
+	ft_write(arr, size, nb);
 	return (arr);
 }
