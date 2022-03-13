@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:59:30 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:05:28 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/13 16:51:15 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (temp);
 	}
 	else
-		return (0);
+	{
+		temp = (char *)malloc(1);
+		temp[0] = '\0';
+		return (temp);
+	}
 }

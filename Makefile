@@ -6,7 +6,7 @@
 #    By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 17:04:36 by schoe             #+#    #+#              #
-#    Updated: 2022/03/10 15:51:44 by schoe            ###   ########.fr        #
+#    Updated: 2022/03/13 17:36:19 by schoe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ else
 	OBJ = ${OBJS}
 endif
 
-all : ${NAME}
+all : $(NAME)
 
-${NAME} : ${OBJ}
-		ar -crs ${NAME} ${OBJ}
+$(NAME) : ${OBJ}
+		ar -crs $(NAME) ${OBJ}
 
 %.o : %.c ${INCLUDE}
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -46,7 +46,7 @@ clean :
 		${RM} ${OBJS} ${BOBJS}
 
 fclean : clean
-		${RM} ${NAME}
+		${RM} $(NAME)
 
 re : fclean all
 

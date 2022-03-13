@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:59:13 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 10:59:26 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/13 14:55:37 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int		len;
-	unsigned char	find;
+	char	find;
 
 	len = ft_strlen(s);
-	find = (unsigned char)c;
+	find = c;
 	while (len > 0 && s[len] != find)
 		len--;
 	if (s[len] == find)
