@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:59:30 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/13 16:51:15 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:07:41 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	char	*temp;
 
-	if (s1 == NULL)
-		return (0);
 	if (set == NULL)
 		return (ft_strdup(s1));
 	i = front(s1, set);

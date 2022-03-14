@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:50:23 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 10:50:34 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:09:26 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s)
-	{
-		ft_putstr_fd(s, fd);
-		write(fd, "\n", 1);
-	}
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

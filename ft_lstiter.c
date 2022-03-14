@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 11:03:59 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 11:04:00 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:24:47 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
-	temp = lst;
-	while (temp)
+	while (lst)
 	{
-		f(temp -> content);
-		temp = temp -> next;
+		f(lst -> content);
+		lst = lst -> next;
 	}
 }
