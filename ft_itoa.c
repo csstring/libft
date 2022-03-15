@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:44:55 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/13 20:52:23 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/15 21:23:34 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_size(long nb)
 	return (size);
 }
 
-void	ft_write(char *arr, int size, long nb)
+void	ft_write(char *arr, int size, long long nb)
 {
 	int	i;
 
@@ -49,10 +49,10 @@ void	ft_write(char *arr, int size, long nb)
 
 char	*ft_itoa(int n)
 {
-	long		nb;
-	char		*arr;
-	int			size;
-	int			i;
+	long long		nb;
+	char			*arr;
+	int				size;
+	int				i;
 
 	i = 0;
 	nb = n;

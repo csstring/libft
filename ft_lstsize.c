@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 11:05:14 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 11:25:05 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/15 13:29:53 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		i;
-	t_list	*temp;
 
-	temp = lst;
 	i = 0;
-	while (temp)
+	while (lst)
 	{
-		temp = temp -> next;
+		lst = lst -> next;
 		i++;
 	}
 	return (i);

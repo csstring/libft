@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 11:04:40 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/14 17:33:11 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/15 13:55:49 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (node == NULL)
 		{
 			ft_lstclear(&new_lst, del);
-			return (0);
+			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, node);
 		lst = lst -> next;

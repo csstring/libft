@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:48:54 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:04:33 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/15 15:16:38 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		ptr[i] = c;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
 	return (s);

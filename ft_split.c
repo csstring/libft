@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:52:42 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:04:45 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/15 21:46:18 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	word_write(char *dest, char const *str, char c)
 	dest[i] = '\0';
 }
 
-void	arr_write(char **split, char const *str, char c)
+int	arr_write(char **split, char const *str, char c)
 {
 	int	i;
 	int	j;
@@ -68,23 +68,33 @@ void	arr_write(char **split, char const *str, char c)
 			while (ft_sep(str[i + j], c) == 0)
 				j++;
 			split[word] = (char *)malloc(sizeof(char) * (j + 1));
+			if (split[word] == NULL)
+				return (0);
 			word_write(split[word], str + i, c);
 			i += j;
 			word++;
 		}
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	int		size;
+	int		slf;
 
 	size = word_count(s, c);
 	arr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (arr == NULL)
 		return (NULL);
 	arr[size] = 0;
-	arr_write(arr, s, c);
-	return (arr);
+	slf = arr_write(arr, s, c);
+	if (slf == 1)
+		return (arr);
+	else
+	{
+		free(arr);
+		return (NULL);
+	}
 }
