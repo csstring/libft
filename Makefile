@@ -6,7 +6,7 @@
 #    By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 17:04:36 by schoe             #+#    #+#              #
-#    Updated: 2022/03/13 17:36:19 by schoe            ###   ########.fr        #
+#    Updated: 2022/03/17 17:51:09 by schoe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME) : ${OBJ}
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 bonus :
-	make BONUS=1 all
+	make BONUS=1
 
 clean :
 		${RM} ${OBJS} ${BOBJS}

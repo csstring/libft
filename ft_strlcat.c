@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:56:00 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/15 21:27:02 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/17 18:00:32 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	d;
 	size_t	s;
 	size_t	d_o;
+	size_t	d;
 
 	d = 0;
 	s = 0;

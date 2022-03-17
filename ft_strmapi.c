@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:57:45 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:05:14 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/17 16:06:32 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size = ft_strlen(s);
 	arr = (char *)malloc(sizeof(char) * (size + 1));
 	if (arr == NULL)
-		return (0);
+		return (NULL);
 	while (s[i])
 	{
 		arr[i] = f(i, s[i]);

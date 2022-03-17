@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:59:30 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/14 17:07:41 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/17 17:08:35 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		temp = (char *)malloc(sizeof(char) * (j - i + 2));
 		if (temp == NULL)
-			return (0);
+			return (NULL);
 		ft_strlcpy(temp, &s1[i], j - i + 2);
 		return (temp);
 	}

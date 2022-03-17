@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:58:52 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/10 15:05:23 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/17 18:03:46 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 		}
 		s++;
 	}
-	return (0);
+	return (NULL);
 }

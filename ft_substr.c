@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 11:00:06 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/14 17:06:49 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/17 16:21:01 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (dest == NULL)
-		return (0);
+		return (NULL);
 	while (s[i])
 	{
 		if (i >= start && j < len)
