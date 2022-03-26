@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:56:27 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/14 18:00:52 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/26 13:08:50 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	if (size > 0)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (src_size);
 }

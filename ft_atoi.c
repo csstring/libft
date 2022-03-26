@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 11:01:40 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/14 16:52:41 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/26 13:43:56 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int					minus;
-	unsigned long long	sum;
+	int		minus;
+	size_t	sum;
 
 	minus = 1;
 	sum = 0;

@@ -6,7 +6,7 @@
 /*   By: schoe <schoe@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 10:52:42 by schoe             #+#    #+#             */
-/*   Updated: 2022/03/15 21:46:18 by schoe            ###   ########.fr       */
+/*   Updated: 2022/03/26 13:48:27 by schoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,13 @@ int	arr_write(char **split, char const *str, char c)
 				j++;
 			split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			if (split[word] == NULL)
-				return (0);
+				return (word);
 			word_write(split[word], str + i, c);
 			i += j;
 			word++;
 		}
 	}
-	return (1);
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -88,13 +88,16 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (arr == NULL)
 		return (NULL);
-	arr[size] = 0;
+	arr[size] = NULL;
 	slf = arr_write(arr, s, c);
-	if (slf == 1)
+	if (slf == -1)
 		return (arr);
 	else
 	{
+		while (--slf >= 0)
+			free(arr[slf]);
 		free(arr);
+		arr = NULL;
 		return (NULL);
 	}
 }
